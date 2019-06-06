@@ -1,0 +1,41 @@
+html {
+    font-family: 'VT323', monospace;
+    font-size: 10px;
+    background-color: #DD6EDD;
+}
+h1 {
+    margin: 0; 
+    padding: 20px 0;
+    color: #DD6EDD;
+    font-size: 60px;
+    text-align: center;
+    text-shadow: 5px 5px 1px black;
+}
+
+p,li {
+    color: #FFFFFF;
+    font-size: 25px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+body {
+    width: 600px;
+    margin: 0 auto;
+    background-color: #5B2190;
+    padding: 0 20px 20px 20px;
+    border: 5px solid black; 
+}
+
+a {
+    color: red;
+}
+
+a:visited {
+    color:red; 
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
