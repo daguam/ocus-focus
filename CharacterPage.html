@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script src="scripts/CharacterPage.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         
     </head>
     <body>
         <h1>Current Character</h1>
+        <br><br>
+        <button class="button" type="button" onclick="prevChar()">Previous</button>
+        <button class="button" type="button" onclick="nextChar()">Next</button>
+        <br><br>
         <div>
             <p id="tableStatus"></p>
             <table id="charTable">
@@ -28,23 +33,19 @@
                 </tr>
             </table>
         </div>
+        <br><br><br>
+        <button class="delete" type="button" onclick="deleteChar()">Delete</button>
+        <br><br><br>
         <form>
-            <button type="button" onclick="prevChar()">Previous</button>
-            <button type="button" onclick="nextChar()">Next</button>
-            <br>
-            <input id="nameInput"><button type="button" onclick="addChar()">Add</button>
-            <br>
-            <button type="button" onclick="deleteChar()">Delete</button>
-
+            <input class="input" id="nameInput">
+            <button class="add" type="button" onclick="addChar()">Add</button>
+            <br><br>            
         </form>
         <div>
             <h2>Character List</h2>
             <p id="charList"></p>
-            <script>
-                charList();
-                charDisplay(Characters[charIndex]);
-            </script>
-            <button type="button" onclick="sortCharAge()">Sort by age</button>
+            <button class="button" type="button" onclick="sortCharAge()">Sort by age</button>
         </div>
+    <script src="scripts/CharacterPage.js"></script>
     </body>
 </html>

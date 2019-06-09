@@ -1,3 +1,41 @@
+button.button {
+    color: #FFFFFF;
+    background-color: black;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 2px;
+    outline: none;
+    font-family: 'VT323', monospace;
+    
+}
+
+button.delete{
+    background-color: orangered;
+    color: #FFFFFF;
+    float: center;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 2px;
+    outline: none;
+    font-family: 'VT323', monospace;
+}
+
+button.add{
+    background-color: #4C8FFB;
+    color: #FFFFFF;
+    padding: 5px 10px;
+    text-align: center;
+    margin: 2px;
+    outline: none;
+    font-family: 'VT323', monospace;
+}
+
+.input {
+    padding: 5px 10px;
+    margin: 2px;
+    border-color: black;
+}
+
 html {
     font-family: 'VT323', monospace;
     font-size: 10px;
@@ -12,7 +50,16 @@ h1 {
     text-shadow: 4px 4px 1px black;
 }
 
-p,li {
+h2 {
+    margin: 0; 
+    padding: 20px 0;
+    color: #DD6EDD;
+    font-size: 60px;
+    text-align: left;
+    text-shadow: 4px 4px 1px black;
+}
+
+p,li,table {
     color: #FFFFFF;
     font-size: 25px;
     line-height: 2;

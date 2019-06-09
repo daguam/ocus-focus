@@ -18,6 +18,7 @@ Characters = [
     }
 ];
 
+
 charIndex = 0;
 
 function sortCharAge(){
@@ -47,53 +48,55 @@ function addChar(){
                 hp : Math.floor(Math.random()*101),
                 maxHit: Math.floor(Math.random()*101)
             }
-        )
-        charIndex = Characters.length-1;
-        charDisplay(Characters[charIndex]);
+            )
+            charIndex = Characters.length-1;
+            charDisplay(Characters[charIndex]);
+        }
+        document.getElementById("nameInput").value = "";
+        charList();   
     }
-    document.getElementById("nameInput").value = "";
-    charList();   
-}
-
-function nextChar(){
-    if(charIndex < Characters.length-1){
-        charIndex++;
-        charDisplay(Characters[charIndex]);
+    
+    function nextChar(){
+        if(charIndex < Characters.length-1){
+            charIndex++;
+            charDisplay(Characters[charIndex]);
+        }
     }
-}
-
-function prevChar(){
-    if(charIndex > 0){
-        charIndex--;
-        charDisplay(Characters[charIndex]);
+    
+    function prevChar(){
+        if(charIndex > 0){
+            charIndex--;
+            charDisplay(Characters[charIndex]);
+        }
     }
-}
-
-function charList(){
-    text = "<ul>";
+    
+    function charList(){
+        text = "<ul>";
         Characters.forEach(charListLoad);                
         text += "</ul>"
-            
+        
         document.getElementById("charList").innerHTML = text;
-}
-
-function charListLoad(value){
-    text += "<li>" + value.name + "</li>";
-}
-
-function charDisplay(value){
-    if(Characters.length > 0){
-        document.getElementById("tableStatus").innerHTML = "";
-        document.getElementById("name").innerHTML = value.name;
-        document.getElementById("age").innerHTML = value.age;
-        document.getElementById("level").innerHTML = value.lvl;
-        document.getElementById("hp").innerHTML = value.hp;
-        document.getElementById("maxHit").innerHTML = value.maxHit;
-        document.getElementById("charTable").hidden = false;
     }
-    else{
-        document.getElementById("charTable").hidden = true;
-        document.getElementById("tableStatus").innerHTML = "Empty Table";
+    
+    function charListLoad(value){
+        text += "<li>" + value.name + "</li>";
+    }
+    
+    function charDisplay(value){
+        if(Characters.length > 0){
+            document.getElementById("tableStatus").innerHTML = "";
+            document.getElementById("name").innerHTML = value.name;
+            document.getElementById("age").innerHTML = value.age;
+            document.getElementById("level").innerHTML = value.lvl;
+            document.getElementById("hp").innerHTML = value.hp;
+            document.getElementById("maxHit").innerHTML = value.maxHit;
+            document.getElementById("charTable").hidden = false;
+        }
+        else{
+            document.getElementById("charTable").hidden = true;
+            document.getElementById("tableStatus").innerHTML = "Empty Table";
     }
 }
 
+charList();
+charDisplay(Characters[charIndex]);
