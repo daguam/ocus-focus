@@ -10,7 +10,7 @@ if(!localStorage.getItem('name')) {
     setUsername();
 } else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = "Loading name at inicialization " + storedName;
+    myHeading.textContent = "Welcome Back " + storedName + "!";
 }
 
 myImage.onclick = function() {
@@ -24,6 +24,10 @@ myImage.onclick = function() {
 
 function setUsername() {
     var myName = prompt('Please enter yoru name.');
-    localStorage.setItem('name', myName);
-    myHeading.textContent = 'Loading name at user change or first visit, ' + myName;
+    if (myName != null) {
+        localStorage.setItem('name', myName);
+        myHeading.textContent = 'Welcome ' + myName + "!";
+    } else {
+        myHeading.textContent = "Please sign in";
+    }
 }
