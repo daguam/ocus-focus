@@ -6,7 +6,7 @@ myButton.onclick = function() {
     setUsername();
 }
 
-if(!localStorage.getItem('name') || localStorage.getItem('name') == "") {
+if(localStorage.getItem('name') == "") {
     setUsername();
 } else {
     var storedName = localStorage.getItem('name');
