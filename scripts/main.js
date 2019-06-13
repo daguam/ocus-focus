@@ -6,9 +6,10 @@ myButton.onclick = function() {
     setUsername();
 }
 
-if(localStorage.getItem('name') == "") {
+if(!localStorage.getItem('name')) {
     setUsername();
 } else {
+    
     var storedName = localStorage.getItem('name');
     myHeading.textContent = "Welcome Back to Ocus Focus " + storedName + "!";
 }
