@@ -10,7 +10,7 @@ if(!localStorage.getItem('name') || localStorage.getItem('name') == null) {
     setUsername();
 } else {
     var storedName = localStorage.getItem('name');
-    myHeading.textContent = "Welcome Back " + storedName + "!";
+    myHeading.textContent = "Welcome Back to Ocus Focus " + storedName + "!";
 }
 
 myImage.onclick = function() {
@@ -26,7 +26,7 @@ function setUsername() {
     var myName = prompt('Please enter yoru name.');
     if (myName != null) {
         localStorage.setItem('name', myName);
-        myHeading.textContent = 'Welcome ' + myName + "!";
+        myHeading.textContent = 'Welcome to Ocus Focus ' + myName + "!";
     } else {
         myHeading.textContent = "Please sign in";
     }
