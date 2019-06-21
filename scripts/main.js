@@ -2,10 +2,6 @@ var myImage = document.querySelector('img');
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 
-myButton.onclick = function() {
-    setUsername();
-}
-
 if(!localStorage.getItem('name')) {
     setUsername();
 } else {
@@ -13,6 +9,11 @@ if(!localStorage.getItem('name')) {
     var storedName = localStorage.getItem('name');
     myHeading.textContent = "Welcome Back to Ocus Focus " + storedName + "!";
 }
+
+myButton.onclick = function() {
+    setUsername();
+}
+
 
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
