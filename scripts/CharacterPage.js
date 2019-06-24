@@ -7,7 +7,7 @@ Characters = [
         lvl: 1,
         hp: 10,
         maxHit: 1,
-        image: "C:/localhost/JS/ocus-focus/images/Poreon.png"
+        image: "images/Poreon.png"
     },
     
     Zydor = {
@@ -16,7 +16,7 @@ Characters = [
         lvl: 100,
         hp: Number.MAX_VALUE,
         maxHit: 1000,
-        image: "C:/localhost/JS/ocus-focus/images/Zydor.png"
+        image: "images/Zydor.png"
         
     }
 ];
@@ -50,7 +50,7 @@ function addChar(){
                 lvl: Math.floor(Math.random()*101),
                 hp : Math.floor(Math.random()*101),
                 maxHit: Math.floor(Math.random()*101),
-                image: "C:/localhost/JS/ocus-focus/images/noImage.png"
+                image: "images/noImage.png"
             }
         )
         //Displays the new character
