@@ -6,15 +6,17 @@ Characters = [
         age: 25,
         lvl: 1,
         hp: 10,
-        maxHit: 1
+        maxHit: 1,
+        image: "C:/localhost/JS/ocus-focus/images/Poreon.png"
     },
     
-    Amerik = {
-        name: "Amerik",
+    Zydor = {
+        name: "Zydor",
         age: Number.POSITIVE_INFINITY,
         lvl: 100,
         hp: Number.MAX_VALUE,
-        maxHit: 1000
+        maxHit: 1000,
+        image: "C:/localhost/JS/ocus-focus/images/Zydor.png"
         
     }
 ];
@@ -47,7 +49,8 @@ function addChar(){
                 age: Math.floor(Math.random()*101),
                 lvl: Math.floor(Math.random()*101),
                 hp : Math.floor(Math.random()*101),
-                maxHit: Math.floor(Math.random()*101)
+                maxHit: Math.floor(Math.random()*101),
+                image: "C:/localhost/JS/ocus-focus/images/noImage.png"
             }
         )
         //Displays the new character
@@ -71,7 +74,7 @@ function prevChar(){
         charDisplay(Characters[charIndex]);
     }
 }
-//Display character list with the array method for each and     
+//Display character list with the array method for each     
 function charList(){
     text = "<ul>";
     Characters.forEach(charListLoad);                
@@ -92,7 +95,8 @@ function charDisplay(value){
         document.getElementById("hp").innerHTML = value.hp;
         document.getElementById("maxHit").innerHTML = value.maxHit;
         document.getElementById("charTable").hidden = false;
-    }
+        document.getElementById("character").src = value.image;
+    }       
     else{
         document.getElementById("charTable").hidden = true;
         document.getElementById("tableStatus").innerHTML = "Empty Table";
