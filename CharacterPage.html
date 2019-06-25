@@ -38,9 +38,15 @@
         <br><br><br>
         <button class="delete" type="button" onclick="deleteChar()">Delete</button>
         <br><br><br>
-            <input class="input" id="nameInput">
-            <button class="add" type="button" onclick="addChar()">Add</button>
-            <br><br>            
+        <form action="/CharacterPage.html" method="POST">
+            <fieldset>
+                <legend>Create New Character</legend>
+                <label for="nameInput">Name:</label>
+                <input type="text" value="THINK OF A NEW NAME!" class="input" id="nameInput">
+                <br><br>          
+                <button class="add" type="button" onclick="addChar()">Add</button>
+            </fieldset>
+        </form>
         <div>
             <h2>Character List</h2>
             <p id="charList"></p>
@@ -51,6 +57,7 @@
         <a href="index.html">
            <button class="back">Back to index</button>
         </a>
+    <!-- Script loads at the end-->
     <script src="scripts/CharacterPage.js"></script>
     </body>
 </html>

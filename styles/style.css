@@ -70,7 +70,7 @@ h2 {
     text-shadow: 4px 4px 1px black;
 }
 
-p,li,table {
+p,li,table,label,legend {
     color: #FFFFFF;
     font-size: 25px;
     line-height: 2;
