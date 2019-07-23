@@ -7,7 +7,8 @@
         <link href="https://fonts.googleapis.com/css?family=VT323&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">    
+        <meta charset="UTF-8">
+        <title>Character Page</title>
     </head>
     <body>
         <h1>Current Character</h1>
@@ -33,7 +34,7 @@
                 <tr>
                     <td>MaxHit:</td><td id="maxHit"></td>
                 </tr>
-            </table><img id="character" src="images/Poreon.png">
+            </table><img id="character" src="images/Poreon.png" alt="current character image">
         </div>
         <br><br><br>
         <button class="delete" type="button" onclick="deleteChar()">Delete</button>
@@ -54,9 +55,7 @@
         </div>
         <br>
         <br>
-        <a href="index.html">
-           <button class="back">Back to index</button>
-        </a>
+        <button class="back" onclick="backIndex()">Back to index</button>
     <!-- Script loads at the end-->
     <script src="scripts/CharacterPage.js"></script>
     </body>

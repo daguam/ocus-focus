@@ -102,6 +102,10 @@ function charDisplay(value){
         document.getElementById("tableStatus").innerHTML = "Empty Table";
     }
 }
+//Returns to index on click
+function backIndex(){
+    document.location.href = "index.html";
+}
 //Inicialization
 charList();
 charDisplay(Characters[charIndex]);
