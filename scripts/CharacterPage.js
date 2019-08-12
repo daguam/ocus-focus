@@ -96,10 +96,12 @@ function charDisplay(value){
         document.getElementById("maxHit").innerHTML = value.maxHit;
         document.getElementById("charTable").hidden = false;
         document.getElementById("character").src = value.image;
+        document.getElementById("character").style = "display:block";
     }       
     else{
         document.getElementById("charTable").hidden = true;
         document.getElementById("tableStatus").innerHTML = "Empty Table";
+        document.getElementById("character").style = "display:none";
     }
 }
 //Returns to index on click
