@@ -10,17 +10,17 @@
   <body>
     <nav class="navbar">
       <ul>
-        <li class="navbar"><a href="#home">Home</a></li>
-        <li class="navbar"><a href="#nav2">Nav 2</a></li>
+        <li id="home" class="navbar"><a href="#home">Home</a></li>
+        <li class="navbar"><a href="#rcg">Character Generator</a></li>
         <li id="login" class="navbar"><a href="#nav3">Change User</a></li>
       </ul>
     </nav>
     <header>
       <h1>Ocus Focus</h1>
+      <img src="images/imgOcusFocus.png" alt="A pixel art devil">
     </header>
-    <img src="images/imgOcusFocus.png" alt="A pixel art devil">
     <main>
-      <article>
+      <article class="padd">
         <h2>What is OcusFocus?</h2>
         <p><strong>Ocus Focus</strong> is my first try of a completely from scratch project in which
             i plan on greatly develop my understanding in:</p>
@@ -35,22 +35,59 @@
             and build great projects.</p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi impedit debitis corrupti voluptas voluptate cumque.</p>
       </article>
-      <aside>
-        <h2>Aside structure block</h2>
-        <ul>
-          <li><a href="CharacterPage.html" 
-              title="This is intended to become an animated character list">Character Page</a></li>
-          <li><a href="#">Aside 1</a></li>
-          <li><a href="#">Aside 2</a></li>
-          <li><a href="#">Aside 3</a></li>
-        </ul>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/DHB42n9n6pA" 
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen></iframe>
-      </aside>
+      <div id="rcg"></div>
+      <br><br><br><br><br><br>
+      <div class="padd">
+          <h3>Random Stats Character Generator</h3>
+          <br><br>
+          <div style="padding: 15px">
+              <button class="button" type="button" onclick="prevChar()">Previous</button>
+              <button class="button" type="button" onclick="nextChar()">Next</button>
+              <br><br>
+              <div>
+                  <p id="tableStatus"></p>
+                  <table id="charTable">
+                      <tr>
+                          <td>Name:</td><td id="name"></td>
+                      </tr>
+                      <tr>
+                          <td>Age:</td><td id="age"></td>
+                      </tr>
+                      <tr>
+                          <td>Level:</td><td id="level"></td>
+                      </tr>
+                      <tr>
+                          <td>Hp:</td><td id="hp"></td>
+                      </tr>
+                      <tr>
+                          <td>MaxHit:</td><td id="maxHit"></td>
+                      </tr>
+                  </table><img id="character" src="images/Poreon.png" alt="current character image">
+              </div>
+              <br><br><br>
+              <button class="delete" type="button" onclick="deleteChar()">Delete</button>
+              <br><br><br>
+              <form action="/CharacterPage.html" method="POST">
+                  <fieldset>
+                      <legend>Create New Character</legend>
+                      <label for="nameInput">Name: <abbr title="required">*</abbr></label>
+                      <input type="text" value="THINK OF A NEW NAME!" class="input" id="nameInput" name="new_char_name" required>
+                      <br><br>          
+                      <button class="add" type="submit" onclick="addChar()">Add</button>
+                  </fieldset>
+              </form>
+              <div>
+                  <h2>Character List</h2>
+                  <p id="charList"></p>
+                  <button class="button" type="button" onclick="sortCharAge()">Sort by age</button>
+              </div>
+              <br>
+              <br>
+              <button class="back" onclick="backIndex()">Back to index</button>
+          </div>
+      </div>        
     </main>
     <footer>
-      <button class="button">Change user</button>
     </footer>
     <script src="scripts/main.js"></script>
   </body>
