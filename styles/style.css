@@ -50,7 +50,6 @@ button.add{
 html {
     font-family: 'VT323', monospace;
     font-size: 10px;
-    background-color: #DD6EDD;
 }
 h1 {
     margin: 0; 
@@ -78,11 +77,13 @@ p,li,table,label,legend {
 }
 
 body {
-    width: 600px;
     margin: 0 auto;
+    padding-top: 80px;
     background-color: #5B2190;
-    padding: 0 20px 20px 20px;
-    border: 5px solid black; 
+}
+
+article {
+    padding: 15px;
 }
 
 a {
@@ -96,4 +97,40 @@ a:visited {
 img {
     display: block;
     margin: 0 auto;
+}
+
+.navbar ul {
+    list-style-type: none;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    background-color: black;
+    overflow: hidden;
+    width: 100%;
+}
+
+.navbar li {
+    float: left;
+}
+
+.navbar li:last-child {
+    float: right;
+}
+
+.navbar li a {
+    display: block;
+    padding: 14px 16px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #5B2190;
+}
+
+.active {
+    background-color: #DD6EDD;
 }

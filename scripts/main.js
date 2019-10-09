@@ -2,6 +2,7 @@
 var myImage = document.querySelector('img');
 var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
+var login = document.getElementById("login")
 
 //Checks for stored username or sets a new one if there is none
 if(!localStorage.getItem('name')) {
@@ -11,6 +12,10 @@ if(!localStorage.getItem('name')) {
     var storedName = localStorage.getItem('name');
     myHeading.textContent = "Welcome Back to Ocus Focus " + storedName + "!";
 }
+login.onclick = function() {
+    setUsername();
+}
+
 //Sets new username
 myButton.onclick = function() {
     setUsername();
