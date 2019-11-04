@@ -12,7 +12,6 @@ button.button {
 button.back {
     background-color: green;
     color: #FFFFFF;
-    float: center;
     padding: 5px 10px;
     text-align: center;
     margin: 2px;
@@ -23,7 +22,6 @@ button.back {
 button.delete{
     background-color: orangered;
     color: #FFFFFF;
-    float: center;
     padding: 5px 10px;
     text-align: center;
     margin: 2px;

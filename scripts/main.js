@@ -1,6 +1,8 @@
 //Creates variables selecting the first img, button and h1
-var myImage = document.querySelector('img');
 var myHeading = document.querySelector('h1');
+//Creates variables selecting the first element with the specified class
+var myImage = document.querySelector('.image');
+
 //Creates variables selecting the element by its id
 var login = document.getElementById("login");
 var home = document.getElementById("home");
