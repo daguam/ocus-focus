@@ -1,42 +1,26 @@
-button.button {
-    color: #FFFFFF;
-    background-color: black;
-    padding: 5px 10px;
+button {
+    font-size: 4em;
+    font-family: 'VT323', monospace;
     text-align: center;
+    color: #FFFFFF;
+    padding: 5px 10px;
     margin: 2px;
     outline: none;
-    font-family: 'VT323', monospace;
-    
+}
+button.button {
+    background-color: black;    
 }
 
 button.back {
     background-color: green;
-    color: #FFFFFF;
-    padding: 5px 10px;
-    text-align: center;
-    margin: 2px;
-    outline: none;
-    font-family: 'VT323', monospace;
 }
 
 button.delete{
     background-color: orangered;
-    color: #FFFFFF;
-    padding: 5px 10px;
-    text-align: center;
-    margin: 2px;
-    outline: none;
-    font-family: 'VT323', monospace;
 }
 
 button.add{
     background-color: #4C8FFB;
-    color: #FFFFFF;
-    padding: 5px 10px;
-    text-align: center;
-    margin: 2px;
-    outline: none;
-    font-family: 'VT323', monospace;
 }
 
 .input {
@@ -70,6 +54,7 @@ p,li,table,label,legend {
     font-size: 25px;
     line-height: 2;
     letter-spacing: 1px;
+    text-align: left;
 }
 
 header {
@@ -91,7 +76,11 @@ body {
     margin: 0 auto;
     border: 2px solid black;
     padding: 15px;
-    
+    text-align: center;
+}
+
+table {
+    text-align: left;
 }
 a {
     color: red;
