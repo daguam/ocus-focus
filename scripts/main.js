@@ -24,13 +24,15 @@ if(!localStorage.getItem('name')) {
 login.onclick = function() {
     setUsername();
 }
-//Changes de color of the image on click event
+//Changes the image and heading color on click event
 myImage.onclick = function() {
     var mySrc = myImage.getAttribute('src');
-    if(mySrc === 'images/imgOcusFocus.png') {
-        myImage.setAttribute('src','images/imgOcusFocus2.png');
+    if(mySrc === 'images/ocusFocus2.png') {
+        myImage.setAttribute('src','images/ocusFocus.png');
+        myHeading.style.color = "#f0e7e7";
     } else {
-        myImage.setAttribute('src','images/imgOcusFocus.png');
+        myImage.setAttribute('src','images/ocusFocus2.png');
+        myHeading.style.color = "black";
     }
 }
 //Set username using localstorage
@@ -60,7 +62,7 @@ Characters = [
         lvl: 1,
         hp: 10,
         maxHit: 1,
-        image: "images/Poreon.png"
+        image: "images/imgOcusFocus.png"
     },
     
     Zydor = {
@@ -69,7 +71,7 @@ Characters = [
         lvl: 100,
         hp: Number.MAX_VALUE,
         maxHit: 1000,
-        image: "images/Zydor.png"
+        image: "images/imgOcusFocus2.png"
         
     }
 ];
