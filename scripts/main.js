@@ -1,15 +1,24 @@
-//Creates variables selecting the first img, button and h1
+//Creates variables selecting the first element of its type
+var myIcon = document.querySelector('i');
 var myHeading = document.querySelector('h1');
 //Creates variables selecting the first element with the specified class
 var myImage = document.querySelector('.image');
+var nextBtn = document.querySelector('.next');
+var prevBtn = document.querySelector('.prev');
+var deleteBtn = document.querySelector('.delete');
+var addBtn = document.querySelector('.add');
+var backBtn = document.querySelector('.back');
+var sortBtn = document.querySelector('.sort');
 
 //Responsive navigation function
 function navFunction() {
     var x = document.getElementById("myTopnav");
     if (x.className === "topnav") {
         x.className += " responsive";
+        myIcon.textContent = "-";
     } else {
         x.className = "topnav";
+        myIcon.textContent = "+";
     }
 }
 
@@ -46,12 +55,12 @@ function setUsername() {
 function topFunction() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-  }
+}
 
 //CHARACTER DEMO
 
 //Temporary character array
-Characters = [
+var Characters = [
     
     Poreon = {
         name: "Poreon",
@@ -73,17 +82,17 @@ Characters = [
     }
 ];
 
-charIndex = 0;
+var charIndex = 0;
 
 //Example of the array sort method
-function sortCharAge(){
+sortBtn.onclick = function(){
     Characters.sort(function(a,b){return a.age - b.age});
     charIndex = 0;
     charDisplay(Characters[charIndex]);
     charList();
 }
 //Deletes current character
-function deleteChar(){
+deleteBtn.onclick = function(){
     Characters.splice(charIndex,1);
     if(charIndex > 0){
         charIndex--;
@@ -92,7 +101,7 @@ function deleteChar(){
     charList();
 }
 //Adds character with name from input and random stats values
-function addChar(){
+addBtn.onclick = function(){
     if(document.getElementById("nameInput").value != "")
     {
         Characters.push(
@@ -104,8 +113,8 @@ function addChar(){
                 maxHit: Math.floor(Math.random()*101),
                 image: "images/noImage.png"
             }
-        )
-        //Displays the new character
+            )
+            //Displays the new character
         charIndex = Characters.length-1;
         charDisplay(Characters[charIndex]);
     }
@@ -113,14 +122,14 @@ function addChar(){
     charList();   
 }
 //Displays next char    
-function nextChar(){
+nextBtn.onclick = function() {
     if(charIndex < Characters.length-1){
         charIndex++;
         charDisplay(Characters[charIndex]);
     }
 }
 //Displays previous char    
-function prevChar(){
+prevBtn.onclick = function() {
     if(charIndex > 0){
         charIndex--;
         charDisplay(Characters[charIndex]);
@@ -131,9 +140,8 @@ function charList(){
     text = "<ul>";
     Characters.forEach(charListLoad);                
     text += "</ul>"
-        document.getElementById("charList").innerHTML = text;
+    document.getElementById("charList").innerHTML = text;
 }
-    
 function charListLoad(value){
     text += "<li>" + value.name + "</li>";
 }
@@ -157,7 +165,7 @@ function charDisplay(value){
     }
 }
 //Returns to index on click
-function backIndex(){
+backBtn.onclick = function() {
     document.location.href = "index.html";
 }
 //Inicialization

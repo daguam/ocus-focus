@@ -113,20 +113,28 @@ button {
     margin: 2px;
     outline: none;
 }
-button.button {
+button.next {
     background-color: black;    
+}
+
+button.prev {
+    background-color: black;
 }
 
 button.back {
     background-color: green;
 }
 
-button.delete{
+button.delete {
     background-color: orangered;
 }
 
-button.add{
+button.add {
     background-color: #4C8FFB;
+}
+
+button.sort {
+    background-color: blueviolet;
 }
 
 /* General Classes */
