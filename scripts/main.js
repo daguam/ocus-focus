@@ -3,13 +3,14 @@ var myHeading = document.querySelector('h1');
 //Creates variables selecting the first element with the specified class
 var myImage = document.querySelector('.image');
 
-//Creates variables selecting the element by its id
-var login = document.getElementById("login");
-var home = document.getElementById("home");
-
-//Back to top
-home.onclick = function(){
-    topFunction();
+//Responsive navigation function
+function navFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
 }
 
 //Checks for stored username or sets a new one if there is none
@@ -19,10 +20,6 @@ if(!localStorage.getItem('name')) {
     
     var storedName = localStorage.getItem('name');
     myHeading.textContent = "Welcome Back to Ocus Focus " + storedName + "!";
-}
-//Sets new user name
-login.onclick = function() {
-    setUsername();
 }
 //Changes the image and heading color on click event
 myImage.onclick = function() {
